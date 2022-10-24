@@ -10,11 +10,11 @@
 
 // ombre
 @mixin ombretitre {
-  box-shadow: 0px 1px 5px #2b2b2b;
+  box-shadow: 0px 1px 5px #4a4a4a99;
 }
 
 @mixin ombremain {
-  box-shadow: 0px 2px 8px rgba(220, 220, 220, 0.747);
+  box-shadow: 0px 0px 8px rgba(220, 220, 220, 0.747);
 }
 
 //Bouton
