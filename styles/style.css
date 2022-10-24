@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&family=Shrikhand&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fefefe;
+  max-width: 1920px;
+}
+
+/*=========== Header =======*/
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*== Logo ==*/
+header .logo {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 5px 0;
+  box-shadow: 0px 1px 5px #2b2b2b;
+}
+
+header .logo h1 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: "Shrikhand", cursive;
+}
+
+header .logo a {
+  position: absolute;
+  left: 20px;
+}
+
+header .logo .fa-solid {
+  font-size: 1.4rem;
+}
+
+/*== Localisation ==*/
+header .localisation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #eee;
+  padding: 5px 0;
+}
+
+header .localisation .fa-solid {
+  padding: 0 10px;
+}
+
+/*=================== BODY ==================*/
+
+/*# sourceMappingURL=style.css.map */

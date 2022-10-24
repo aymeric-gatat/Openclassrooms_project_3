@@ -1,0 +1,31 @@
+//============== Variables =============
+
+// Police d'ecriture
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&family=Shrikhand&display=swap");
+
+$font-size: (
+  title: 1.8rem,
+  large: 1.6rem,
+  medium: 1.4rem,
+  small: 1rem,
+);
+
+$font-weight: (
+  large: 800,
+  normal: 500,
+  light: 300,
+);
+
+// Couleurs
+$color-palette: (
+  primaire: #9356dc,
+  secondaire: #ff79da,
+  tertiaire: #99e2d0,
+  bg-color: #fefefe,
+  light-grey: #f3f3f3,
+  dark-grey: #eee,
+  default-1: #000,
+  default-2: #fff,
+);
+
+// Paddings et Margins

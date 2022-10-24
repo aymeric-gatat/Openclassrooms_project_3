@@ -1,0 +1,66 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+* {
+  font-family: "Roboto", sans-serif;
+  color: map-get($color-palette, default-1);
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: map-get($color-palette, bg-color);
+  max-width: 1920px;
+}
+
+/*=========== Header =======*/
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*== Logo ==*/
+header .logo {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 5px 0;
+  @include ombre;
+}
+
+header .logo h1 {
+  @include titre;
+}
+
+header .logo a {
+  position: absolute;
+  left: 20px;
+}
+
+header .logo .fa-solid {
+  font-size: map-get($font-size, medium);
+}
+
+/*== Localisation ==*/
+header .localisation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: map-get($color-palette, dark-grey);
+  padding: 5px 0;
+}
+
+header .localisation .fa-solid {
+  padding: 0 10px;
+}
