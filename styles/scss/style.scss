@@ -1,6 +1,61 @@
 @import "variables.scss";
 @import "mixins.scss";
 
+/*====== FLECHE RETOUR =====*/
+header .logo a {
+  display: none;
+}
+
 @import "header-footer.scss";
 
-/*=================== BODY ==================*/
+/*============= Body ==============*/
+
+main {
+  .entete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: map-get($color-palette, light-grey);
+    h2 {
+      margin: 30px 0px 15px 0px;
+      font-size: map-get($font-size, large);
+    }
+    p {
+      font-size: map-get($font-size, small);
+      color: #4d4d4d;
+    }
+    a {
+      @include bouton;
+      margin: 50px 0px;
+    }
+  }
+  .fontionnement {
+    margin: 20px;
+    h2 {
+      font-size: map-get($font-size, large);
+      margin: 30px 0;
+    }
+    .small-containeur {
+      @include small-containeur;
+      p {
+        font-size: map-get($font-size, small);
+        font-weight: map-get($font-weight, large);
+      }
+      .fa-solid {
+        margin-right: 15px;
+        transition: all 0.3s ease-in-out;
+      }
+      span {
+        position: absolute;
+        left: -10px;
+        padding: 2px 6px;
+        border-radius: 50px;
+        font-size: map-get($font-size, small);
+        color: map-get($color-palette, default-2);
+        background-color: map-get($color-palette, primaire);
+      }
+    }
+  }
+}
