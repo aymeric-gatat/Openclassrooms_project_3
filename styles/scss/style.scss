@@ -11,6 +11,7 @@ header .logo a {
 /*============= Body ==============*/
 
 main {
+  /*============ En-Tête =========*/
   .entete {
     display: flex;
     flex-direction: column;
@@ -32,6 +33,7 @@ main {
       margin: 50px 0px;
     }
   }
+  /*============ Fonctionnement =========*/
   .fontionnement {
     margin: 20px;
     h2 {
@@ -56,6 +58,58 @@ main {
         font-size: map-get($font-size, small);
         color: map-get($color-palette, default-2);
         background-color: map-get($color-palette, primaire);
+      }
+    }
+  }
+  /*============ Restaurants =========*/
+  .restaurants {
+    padding: 50px 20px;
+    background-color: map-get($color-palette, light-grey);
+    h2 {
+      font-size: map-get($font-size, large);
+      margin: 30px 0;
+    }
+    .containeur-1 {
+      // ------- grid -------
+      display: grid;
+      grid-template-columns: 2fr 0.7fr;
+      grid-template-rows: 2fr 0.7fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      // --------------------
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      @include ombremain;
+      background-color: map-get($color-palette, default-2);
+      border-radius: 20px;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.02);
+      }
+      img {
+        grid-area: 1 / 1 / 2 / 4;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .text {
+        margin: 15px;
+        grid-area: 2 / 1 / 3 / 2;
+      }
+      .coeur {
+        grid-area: 2 / 2 / 3 / 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .fa-regular {
+          font-size: 1.5rem;
+        }
+        .fa-solid {
+          display: none;
+        }
       }
     }
   }
