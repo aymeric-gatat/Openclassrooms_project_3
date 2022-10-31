@@ -80,13 +80,13 @@
   align-items: center;
   background-color: map-get($color-palette, dark-grey);
   border-radius: 15px;
-  margin: 20px 0;
+  margin: 30px 0;
   padding: 20px;
   transition: all 0.3s ease-in-out;
   @include ombremain;
   &:hover {
     background-color: #f5edff;
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
   &:hover .fa-solid {
     color: map-get($color-palette, primaire);

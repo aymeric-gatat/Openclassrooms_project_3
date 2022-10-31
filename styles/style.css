@@ -180,14 +180,14 @@ main .fontionnement .small-containeur {
   align-items: center;
   background-color: #e2e2e2;
   border-radius: 15px;
-  margin: 20px 0;
+  margin: 30px 0;
   padding: 20px;
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 1px 8px rgba(180, 180, 180, 0.6);
 }
 main .fontionnement .small-containeur:hover {
   background-color: #f5edff;
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 main .fontionnement .small-containeur:hover .fa-solid {
   color: #9356dc;
