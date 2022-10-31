@@ -72,21 +72,10 @@ main {
     }
     .containeur-1 {
       // ------- grid -------
-      display: grid;
-      grid-template-columns: 2fr 0.7fr;
-      grid-template-rows: 2fr 0.7fr;
-      grid-column-gap: 0px;
-      grid-row-gap: 0px;
-      align-items: center;
-      // --------------------
-      position: relative;
-      width: 100%;
-      height: 300px;
+      @include containeur-1;
       margin: 20px 0;
-      overflow: hidden;
-      @include ombremain;
       background-color: map-get($color-palette, default-2);
-      border-radius: 20px;
+      border-radius: 10px;
       transition: all 0.3s ease-in-out;
       img {
         grid-area: 1 / 1 / 2 / 4;
@@ -94,39 +83,35 @@ main {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
       }
       .text {
-        margin: 0 15px;
+        margin: 20px 15px;
         grid-area: 2 / 1 / 3 / 2;
+        h3 {
+          font-size: map-get($font-size, small);
+          font-weight: map-get($font-weight, large);
+        }
+        p {
+          font-size: map-get($font-size, small);
+          font-weight: map-get($font-weight, light);
+        }
       }
-      .like {
-        grid-area: 2 / 2 / 3 / 3;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        input {
-          display: none;
-          &:checked ~ {
-            .fa-solid {
-              display: block;
-              animation: like_anim 0.3s;
-              background: linear-gradient(#ff79da, #9356dc);
-              color: transparent;
-              background-size: 400%;
-              -webkit-background-clip: text;
-            }
-            .fa-regular {
-              display: none;
-            }
-          }
-        }
-        .fa-regular,
-        .fa-solid {
-          font-size: 1.7rem;
-        }
-        .fa-solid {
-          display: none;
-        }
+      @include btn_like;
+      span {
+        display: none;
+      }
+      .new {
+        display: block;
+        position: absolute;
+        font-size: 0.8rem;
+        font-weight: 550;
+        color: #139273;
+        background-color: #99e2d0;
+        padding: 4px 10px;
+        top: 10px;
+        right: 5px;
+        border-radius: 2px;
       }
     }
   }
