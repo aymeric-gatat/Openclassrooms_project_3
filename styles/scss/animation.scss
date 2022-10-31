@@ -1,0 +1,35 @@
+/* ===== Animations ====*/
+
+//============== Animation Like ============
+@keyframes like_anim {
+  0% {
+    background: linear-gradient(#ff79d917, #9356dc17);
+    color: transparent;
+    background-size: 400%;
+    -webkit-background-clip: text;
+  }
+  25% {
+    background: linear-gradient(#ff79da41, #9356dc41);
+    color: transparent;
+    background-size: 400%;
+    -webkit-background-clip: text;
+  }
+  50% {
+    background: linear-gradient(#ff79da8c, #9256dc8c);
+    color: transparent;
+    background-size: 400%;
+    -webkit-background-clip: text;
+  }
+  75% {
+    background: linear-gradient(#ff79d9c0, #9356dcc0);
+    color: transparent;
+    background-size: 400%;
+    -webkit-background-clip: text;
+  }
+  100% {
+    background: linear-gradient(#ff79da, #9356dc);
+    color: transparent;
+    background-size: 400%;
+    -webkit-background-clip: text;
+  }
+}

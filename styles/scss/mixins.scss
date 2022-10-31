@@ -63,11 +63,6 @@
 
 // Containeur
 
-@for $i from 1 to 3 {
-  .containeur-#{$i} {
-  }
-}
-
 .containeur-1 {
   // ------- grid -------
   display: grid;
