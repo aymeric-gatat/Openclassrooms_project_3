@@ -6,34 +6,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&family=Shrikhand&display=swap");
 @keyframes like_anim {
   0% {
-    background: linear-gradient(rgba(255, 121, 217, 0.0901960784), rgba(147, 86, 220, 0.0901960784));
+    background: linear-gradient(rgba(147, 86, 220, 0.0901960784), rgba(255, 121, 217, 0.0901960784));
     color: transparent;
     background-size: 400%;
     -webkit-background-clip: text;
   }
   25% {
-    background: linear-gradient(rgba(255, 121, 218, 0.2549019608), rgba(147, 86, 220, 0.2549019608));
+    background: linear-gradient(rgba(147, 86, 220, 0.2549019608), rgba(255, 121, 218, 0.2549019608));
     color: transparent;
     background-size: 400%;
     -webkit-background-clip: text;
   }
   50% {
-    background: linear-gradient(rgba(255, 121, 218, 0.5490196078), rgba(146, 86, 220, 0.5490196078));
+    background: linear-gradient(rgba(146, 86, 220, 0.5490196078), rgba(255, 121, 218, 0.5490196078));
     color: transparent;
     background-size: 400%;
     -webkit-background-clip: text;
   }
   75% {
-    background: linear-gradient(rgba(255, 121, 217, 0.7529411765), rgba(147, 86, 220, 0.7529411765));
+    background: linear-gradient(rgba(147, 86, 220, 0.7529411765), rgba(255, 121, 217, 0.7529411765));
     color: transparent;
     background-size: 400%;
     -webkit-background-clip: text;
   }
   100% {
-    background: linear-gradient(#ff79da, #9356dc);
+    background: linear-gradient(#9356dc, #ff79da);
     color: transparent;
     background-size: 400%;
     -webkit-background-clip: text;
+  }
+}
+@keyframes spin {
+  0% {
+    background: radial-gradient(farthest-side, #474bff 94%, rgba(0, 0, 0, 0)) top/9px 9px no-repeat, conic-gradient(rgba(0, 0, 0, 0) 30%, #474bff);
+    -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 9px), #000 0);
+  }
+  50% {
+    background: radial-gradient(farthest-side, #474bff 94%, rgba(0, 0, 0, 0)) top/9px 9px no-repeat, conic-gradient(rgba(0, 0, 0, 0) 30%, #474bff);
+    -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 9px), #000 0);
+    transform: rotate(360deg);
+  }
+  100% {
+    background: radial-gradient(farthest-side, #474bff 94%, rgba(0, 0, 0, 0)) top/9px 9px no-repeat, conic-gradient(rgba(0, 0, 0, 0) 30%, #474bff);
+    -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 9px), #000 0);
+    transform: rotate(720deg);
+  }
+  100% {
+    display: none;
+  }
+}
+@keyframes loader {
+  0% {
+    position: fixed;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.385);
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+  }
+  99% {
+    position: fixed;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.385);
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+@keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 /*====== FLECHE RETOUR =====*/
@@ -41,6 +92,90 @@ header .logo a {
   display: none;
 }
 
+/* ===== Animations ====*/
+@keyframes like_anim {
+  0% {
+    background: linear-gradient(rgba(147, 86, 220, 0.0901960784), rgba(255, 121, 217, 0.0901960784));
+    color: transparent;
+    background-size: 400%;
+    -webkit-background-clip: text;
+  }
+  25% {
+    background: linear-gradient(rgba(147, 86, 220, 0.2549019608), rgba(255, 121, 218, 0.2549019608));
+    color: transparent;
+    background-size: 400%;
+    -webkit-background-clip: text;
+  }
+  50% {
+    background: linear-gradient(rgba(146, 86, 220, 0.5490196078), rgba(255, 121, 218, 0.5490196078));
+    color: transparent;
+    background-size: 400%;
+    -webkit-background-clip: text;
+  }
+  75% {
+    background: linear-gradient(rgba(147, 86, 220, 0.7529411765), rgba(255, 121, 217, 0.7529411765));
+    color: transparent;
+    background-size: 400%;
+    -webkit-background-clip: text;
+  }
+  100% {
+    background: linear-gradient(#9356dc, #ff79da);
+    color: transparent;
+    background-size: 400%;
+    -webkit-background-clip: text;
+  }
+}
+@keyframes spin {
+  0% {
+    background: radial-gradient(farthest-side, #474bff 94%, rgba(0, 0, 0, 0)) top/9px 9px no-repeat, conic-gradient(rgba(0, 0, 0, 0) 30%, #474bff);
+    -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 9px), #000 0);
+  }
+  50% {
+    background: radial-gradient(farthest-side, #474bff 94%, rgba(0, 0, 0, 0)) top/9px 9px no-repeat, conic-gradient(rgba(0, 0, 0, 0) 30%, #474bff);
+    -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 9px), #000 0);
+    transform: rotate(360deg);
+  }
+  100% {
+    background: radial-gradient(farthest-side, #474bff 94%, rgba(0, 0, 0, 0)) top/9px 9px no-repeat, conic-gradient(rgba(0, 0, 0, 0) 30%, #474bff);
+    -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 9px), #000 0);
+    transform: rotate(720deg);
+  }
+  100% {
+    display: none;
+  }
+}
+@keyframes loader {
+  0% {
+    position: fixed;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.385);
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+  }
+  99% {
+    position: fixed;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.385);
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+@keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
   color: #000;
@@ -56,7 +191,6 @@ body {
   min-width: 300px;
 }
 
-/*=========== Header =========*/
 header {
   width: 100%;
   display: flex;
@@ -102,8 +236,20 @@ header .localisation {
 header .localisation .fa-solid {
   padding: 0 10px;
 }
+header .loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loader 2.5s;
+}
+header .loader span {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  animation: spin 2s;
+}
 
-/*=========== Footer =========*/
 footer {
   background: #353535;
   width: 100%;
@@ -187,7 +333,7 @@ main .fontionnement .small-containeur {
 }
 main .fontionnement .small-containeur:hover {
   background-color: #f5edff;
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 main .fontionnement .small-containeur:hover .fa-solid {
   color: #9356dc;
@@ -225,13 +371,19 @@ main .restaurants .containeur-1 {
   grid-row-gap: 0px;
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 200px;
   overflow: hidden;
+  transition: all 0.2s ease-in-out;
   box-shadow: 0px 1px 8px rgba(180, 180, 180, 0.6);
+  animation: apparition 1s;
   margin: 20px 0;
   background-color: #fff;
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
+}
+main .restaurants .containeur-1:hover {
+  box-shadow: 0px 1px 8px rgba(90, 90, 90, 0.9);
+  transform: scale(1.01);
 }
 main .restaurants .containeur-1 img {
   grid-area: 1/1/2/4;
@@ -264,8 +416,8 @@ main .restaurants .containeur-1 .like input {
 }
 main .restaurants .containeur-1 .like input:checked ~ .fa-solid {
   display: block;
-  animation: like_anim 0.3s;
-  background: linear-gradient(#ff79da, #9356dc);
+  animation: like_anim 0.5s;
+  background: linear-gradient(#9356dc, #ff79da);
   color: transparent;
   background-size: 400%;
   -webkit-background-clip: text;
@@ -295,5 +447,7 @@ main .restaurants .containeur-1 .new {
   right: 5px;
   border-radius: 2px;
 }
+
+/* ====================== Media Queries ====================*/
 
 /*# sourceMappingURL=style.css.map */

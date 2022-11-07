@@ -1,5 +1,6 @@
 @import "variables.scss";
 @import "mixins.scss";
+@import "animation.scss";
 
 * {
   font-family: "Roboto", sans-serif;
@@ -16,7 +17,7 @@ body {
   min-width: 300px;
 }
 
-/*=========== Header =========*/
+//=========== Header =========
 header {
   width: 100%;
   display: flex;
@@ -60,9 +61,22 @@ header {
       padding: 0 10px;
     }
   }
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: loader 2.5s;
+    span {
+      position: absolute;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      animation: spin 2s;
+    }
+  }
 }
 
-/*=========== Footer =========*/
+//=========== Footer =========
 
 footer {
   background: #353535;

@@ -17,6 +17,10 @@
   box-shadow: 0px 1px 8px rgba(180, 180, 180, 0.6);
 }
 
+@mixin ombre_hover {
+  box-shadow: 0px 1px 8px rgba(90, 90, 90, 0.9);
+}
+
 //Bouton
 @mixin bouton {
   background: linear-gradient(
@@ -50,8 +54,8 @@
       &:checked ~ {
         .fa-solid {
           display: block;
-          animation: like_anim 0.3s;
-          background: linear-gradient(#ff79da, #9356dc);
+          animation: like_anim 0.5s;
+          background: linear-gradient(#9356dc, #ff79da);
           color: transparent;
           background-size: 400%;
           -webkit-background-clip: text;
@@ -71,6 +75,21 @@
   }
 }
 
+@mixin new {
+  .new {
+    display: block;
+    position: absolute;
+    font-size: 0.8rem;
+    font-weight: 550;
+    color: #139273;
+    background-color: #99e2d0;
+    padding: 4px 10px;
+    top: 10px;
+    right: 5px;
+    border-radius: 2px;
+  }
+}
+
 // Containeurs
 
 @mixin small-containeur {
@@ -86,7 +105,7 @@
   @include ombremain;
   &:hover {
     background-color: #f5edff;
-    transform: scale(1.02);
+    transform: scale(1.01);
   }
   &:hover .fa-solid {
     color: map-get($color-palette, primaire);
@@ -103,7 +122,13 @@
   // --------------------
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 200px;
   overflow: hidden;
+  transition: all 0.2s ease-in-out;
   @include ombremain;
+  animation: apparition 1s;
+  &:hover {
+    @include ombre_hover;
+    transform: scale(1.01);
+  }
 }

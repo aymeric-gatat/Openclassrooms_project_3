@@ -3,33 +3,109 @@
 //============== Animation Like ============
 @keyframes like_anim {
   0% {
-    background: linear-gradient(#ff79d917, #9356dc17);
+    background: linear-gradient(#9356dc17, #ff79d917);
     color: transparent;
     background-size: 400%;
     -webkit-background-clip: text;
   }
   25% {
-    background: linear-gradient(#ff79da41, #9356dc41);
+    background: linear-gradient(#9356dc41, #ff79da41);
     color: transparent;
     background-size: 400%;
     -webkit-background-clip: text;
   }
   50% {
-    background: linear-gradient(#ff79da8c, #9256dc8c);
+    background: linear-gradient(#9256dc8c, #ff79da8c);
     color: transparent;
     background-size: 400%;
     -webkit-background-clip: text;
   }
   75% {
-    background: linear-gradient(#ff79d9c0, #9356dcc0);
+    background: linear-gradient(#9356dcc0, #ff79d9c0);
     color: transparent;
     background-size: 400%;
     -webkit-background-clip: text;
   }
   100% {
-    background: linear-gradient(#ff79da, #9356dc);
+    background: linear-gradient(#9356dc, #ff79da);
     color: transparent;
     background-size: 400%;
     -webkit-background-clip: text;
+  }
+}
+
+// Loader
+
+@keyframes spin {
+  0% {
+    background: radial-gradient(farthest-side, #474bff 94%, #0000) top/9px 9px
+        no-repeat,
+      conic-gradient(#0000 30%, #474bff);
+    -webkit-mask: radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 9px),
+      #000 0
+    );
+  }
+  50% {
+    background: radial-gradient(farthest-side, #474bff 94%, #0000) top/9px 9px
+        no-repeat,
+      conic-gradient(#0000 30%, #474bff);
+    -webkit-mask: radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 9px),
+      #000 0
+    );
+    transform: rotate(360deg);
+  }
+  100% {
+    background: radial-gradient(farthest-side, #474bff 94%, #0000) top/9px 9px
+        no-repeat,
+      conic-gradient(#0000 30%, #474bff);
+    -webkit-mask: radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 9px),
+      #000 0
+    );
+    transform: rotate(720deg);
+  }
+  100% {
+    display: none;
+  }
+}
+
+@keyframes loader {
+  0% {
+    position: fixed;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.385);
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+  }
+  99% {
+    position: fixed;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.385);
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+
+// Apparition
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

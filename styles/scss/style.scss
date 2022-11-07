@@ -71,7 +71,6 @@ main {
       margin: 30px 0;
     }
     .containeur-1 {
-      // ------- grid -------
       @include containeur-1;
       margin: 20px 0;
       background-color: map-get($color-palette, default-2);
@@ -101,18 +100,9 @@ main {
       span {
         display: none;
       }
-      .new {
-        display: block;
-        position: absolute;
-        font-size: 0.8rem;
-        font-weight: 550;
-        color: #139273;
-        background-color: #99e2d0;
-        padding: 4px 10px;
-        top: 10px;
-        right: 5px;
-        border-radius: 2px;
-      }
+      @include new;
     }
   }
 }
+
+/* ====================== Media Queries ====================*/
