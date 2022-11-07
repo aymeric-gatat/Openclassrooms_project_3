@@ -87,6 +87,14 @@
     opacity: 1;
   }
 }
+@keyframes test {
+  from {
+    background: red;
+  }
+  to {
+    background-color: blue;
+  }
+}
 /*====== FLECHE RETOUR =====*/
 header .logo a {
   display: none;
@@ -174,6 +182,14 @@ header .logo a {
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes test {
+  from {
+    background: red;
+  }
+  to {
+    background-color: blue;
   }
 }
 * {
