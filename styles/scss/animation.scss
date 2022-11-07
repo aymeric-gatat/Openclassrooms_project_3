@@ -36,76 +36,16 @@
 
 // Loader
 
-@keyframes spin {
-  0% {
-    background: radial-gradient(farthest-side, #474bff 94%, #0000) top/9px 9px
-        no-repeat,
-      conic-gradient(#0000 30%, #474bff);
-    -webkit-mask: radial-gradient(
-      farthest-side,
-      #0000 calc(100% - 9px),
-      #000 0
-    );
-  }
-  50% {
-    background: radial-gradient(farthest-side, #474bff 94%, #0000) top/9px 9px
-        no-repeat,
-      conic-gradient(#0000 30%, #474bff);
-    -webkit-mask: radial-gradient(
-      farthest-side,
-      #0000 calc(100% - 9px),
-      #000 0
-    );
-    transform: rotate(360deg);
-  }
-  100% {
-    background: radial-gradient(farthest-side, #474bff 94%, #0000) top/9px 9px
-        no-repeat,
-      conic-gradient(#0000 30%, #474bff);
-    -webkit-mask: radial-gradient(
-      farthest-side,
-      #0000 calc(100% - 9px),
-      #000 0
-    );
-    transform: rotate(720deg);
-  }
-  100% {
-    display: none;
-  }
-}
-
-@keyframes loader {
-  0% {
-    position: fixed;
-    z-index: 9999;
-    background: rgba(0, 0, 0, 0.385);
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-  }
-  99% {
-    position: fixed;
-    z-index: 9999;
-    background: rgba(0, 0, 0, 0.385);
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-  }
-  100% {
-    display: none;
-  }
-}
-
 // Apparition
 
 @keyframes apparition {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  50% {
+    opacity: 0.5s;
+  }
+  100% {
     opacity: 1;
   }
 }

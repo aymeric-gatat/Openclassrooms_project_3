@@ -126,9 +126,18 @@
   overflow: hidden;
   transition: all 0.2s ease-in-out;
   @include ombremain;
-  animation: apparition 1s;
+  animation: apparition 0s;
   &:hover {
     @include ombre_hover;
     transform: scale(1.01);
+  }
+}
+
+// Boucles
+
+@for $i from 1 to 5 {
+  .m-#{$i} {
+    animation-delay: $i * 0.5s;
+    animation: apparition $i * 3s;
   }
 }

@@ -1,0 +1,92 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "animation.scss";
+@import "header-footer.scss";
+
+// ================= Header ==============
+header {
+  .localisation {
+    display: none;
+  }
+}
+
+//=================== Main ==================
+
+.entete img {
+  position: relative;
+  width: 100%;
+  z-index: -5;
+}
+
+main {
+  padding: 30px 20px 0 20px;
+  margin-top: -50px;
+  border-radius: 50px 50px 0px 0px;
+  background-color: map-get($color-palette, light-grey);
+  z-index: 1;
+  @include btn_like;
+  .titre {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      @include titre;
+      margin: 10px 0;
+    }
+  }
+  h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: map-get($font-weight, light);
+    font-size: map-get($font-size, medium);
+    position: relative;
+    margin: 10px 0;
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: map-get($color-palette, tertiaire);
+      width: 45px;
+      height: 3px;
+      bottom: -5px;
+    }
+  }
+
+  section label {
+    position: relative;
+    @include small-containeur;
+    background-color: map-get($color-palette, default-2);
+    justify-content: space-between;
+    .check {
+      position: absolute;
+      right: -40px;
+      background-color: rgb(154, 224, 195);
+      width: 60px;
+      height: 100%;
+      border-radius: 0 10px 10px 0;
+      padding: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: map-get($font-size, large);
+      opacity: 0;
+      transition: all 0.5s ease;
+      .fa-solid {
+        color: map-get($color-palette, default-2);
+
+        transition: all 1s ease;
+      }
+    }
+    input {
+      display: none;
+      &:checked ~ {
+        .check {
+          opacity: 1;
+          right: 0;
+          .fa-solid {
+            rotate: (360deg);
+          }
+        }
+      }
+    }
+  }
+}
