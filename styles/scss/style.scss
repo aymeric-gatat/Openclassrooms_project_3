@@ -105,3 +105,59 @@ main {
 }
 
 /* ====================== Media Queries ====================*/
+
+@media (767px <= width) {
+  /*============= Body ==============*/
+
+  main {
+    /*============ En-Tête =========*/
+    .entete {
+      height: 250px;
+      h2 {
+        margin: 30px 0px 15px 0px;
+        font-size: map-get($font-size, large);
+      }
+      p {
+        font-size: map-get($font-size, small);
+        color: #4d4d4d;
+        margin: 0 10px;
+      }
+      a {
+        @include bouton;
+        margin: 50px 0px;
+      }
+    }
+    /*============ Fonctionnement =========*/
+    .fontionnement {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      margin: 10px;
+      h2 {
+        margin: 10px 0;
+        width: 100%;
+      }
+      .small-containeur {
+        @include small-containeur;
+        width: 25%;
+      }
+    }
+    /*============ Restaurants =========*/
+    .restaurants {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      h2 {
+        width: 100%;
+        margin: 10px 0;
+      }
+      .containeur-1 {
+        width: 300px;
+        img {
+          border-radius: 15px 15px 0 0;
+        }
+      }
+    }
+  }
+}
