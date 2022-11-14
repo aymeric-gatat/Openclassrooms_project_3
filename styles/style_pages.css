@@ -1,50 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&family=Shrikhand&display=swap");
-.c_1 {
-  transition-delay: 1s;
-  opacity: 1;
-}
-
-.c_2 {
-  transition-delay: 2s;
-  opacity: 1;
-}
-
-.c_3 {
-  transition-delay: 3s;
-  opacity: 1;
-}
-
-.c_4 {
-  transition-delay: 4s;
-  opacity: 1;
-}
-
-.c_5 {
-  transition-delay: 5s;
-  opacity: 1;
-}
-
-.c_6 {
-  transition-delay: 6s;
-  opacity: 1;
-}
-
-.c_7 {
-  transition-delay: 7s;
-  opacity: 1;
-}
-
-.c_8 {
-  transition-delay: 8s;
-  opacity: 1;
-}
-
-.c_9 {
-  transition-delay: 9s;
-  opacity: 1;
-}
-
 /* ===== Animations ====*/
 @keyframes like_anim {
   0% {
@@ -78,23 +33,51 @@
     -webkit-background-clip: text;
   }
 }
+.c_1 {
+  animation: 0.4s normal apparition;
+}
+
+.c_2 {
+  animation: 0.8s normal apparition;
+}
+
+.c_3 {
+  animation: 1.2s normal apparition;
+}
+
+.c_4 {
+  animation: 1.6s normal apparition;
+}
+
+.c_5 {
+  animation: 2s normal apparition;
+}
+
+.c_6 {
+  animation: 2.4s normal apparition;
+}
+
+.c_7 {
+  animation: 2.8s normal apparition;
+}
+
+.c_8 {
+  animation: 3.2s normal apparition;
+}
+
+.c_9 {
+  animation: 3.6s normal apparition;
+}
+
 @keyframes apparition {
   0% {
     opacity: 0;
   }
   50% {
-    opacity: 0.5s;
+    opacity: 0;
   }
   100% {
     opacity: 1;
-  }
-}
-@keyframes test {
-  from {
-    background: red;
-  }
-  to {
-    background-color: blue;
   }
 }
 * {
@@ -130,7 +113,7 @@ header .logo {
   box-shadow: 0px 1px 5px rgba(74, 74, 74, 0.6);
 }
 header .logo h1 {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 500;
   font-family: "Shrikhand", cursive;
   transition: all 0.3s ease-in-out;
@@ -208,15 +191,13 @@ header .localisation {
 }
 
 main {
-  padding: 30px 20px 0 20px;
+  padding: 30px 20px 10px 20px;
   margin-top: -50px;
   border-radius: 50px 50px 0px 0px;
   background-color: #f3f3f3;
   z-index: 1;
-  overflow: hidden;
 }
 main .like {
-  grid-area: 2/2/3/3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -231,6 +212,7 @@ main .like input:checked ~ .fa-solid {
   color: transparent;
   background-size: 400%;
   -webkit-background-clip: text;
+  background-clip: text;
 }
 main .like input:checked ~ .fa-regular {
   display: none;
@@ -249,7 +231,7 @@ main .titre {
   align-items: center;
 }
 main .titre h2 {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 500;
   font-family: "Shrikhand", cursive;
   transition: all 0.3s ease-in-out;
@@ -260,7 +242,7 @@ main h3 {
   font-weight: 300;
   font-size: 1.1rem;
   position: relative;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 main h3::before {
   position: absolute;
@@ -268,42 +250,31 @@ main h3::before {
   background-color: #99e2d0;
   width: 45px;
   height: 3px;
-  bottom: -5px;
+  bottom: -6px;
 }
 main section label {
   position: relative;
-  position: relative;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  background-color: #e2e2e2;
-  border-radius: 15px;
-  margin: 30px 0;
-  padding: 20px;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0px 1px 8px rgba(180, 180, 180, 0.6);
-  background-color: #fff;
   justify-content: space-between;
-  opacity: 0;
-}
-main section label:hover {
-  background-color: #f5edff;
-  transform: scale(1.01);
-}
-main section label:hover .fa-solid {
-  color: #9356dc;
+  align-items: flex-end;
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 10px 0;
+  padding: 10px 20px 10px 10px;
+  box-shadow: 0px 1px 8px rgba(180, 180, 180, 0.6);
 }
 main section label .check {
   position: absolute;
-  right: -40px;
-  background-color: rgb(154, 224, 195);
-  width: 60px;
-  height: 100%;
-  border-radius: 0 10px 10px 0;
-  padding: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
+  top: 0;
+  right: -40px;
+  width: 60px;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+  background-color: rgb(154, 224, 195);
   font-size: 1.4rem;
   opacity: 0;
   transition: all 0.5s ease;
@@ -321,6 +292,18 @@ main section label input:checked ~ .check {
 }
 main section label input:checked ~ .check .fa-solid {
   rotate: 360deg;
+}
+main section label .text {
+  width: 90%;
+  height: 40px;
+}
+main section label .text p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main section label span {
+  font-weight: 800;
 }
 
 /*# sourceMappingURL=style_pages.css.map */

@@ -19,13 +19,12 @@ header {
 }
 
 main {
-  padding: 30px 20px 0 20px;
+  padding: 30px 20px 10px 20px;
   margin-top: -50px;
   border-radius: 50px 50px 0px 0px;
   background-color: map-get($color-palette, light-grey);
   z-index: 1;
   @include btn_like;
-  overflow: hidden;
   .titre {
     display: flex;
     flex-direction: row;
@@ -41,34 +40,28 @@ main {
     font-weight: map-get($font-weight, light);
     font-size: map-get($font-size, medium);
     position: relative;
-    margin: 10px 0;
+    margin: 20px 0;
     &::before {
       position: absolute;
       content: "";
       background-color: map-get($color-palette, tertiaire);
       width: 45px;
       height: 3px;
-      bottom: -5px;
+      bottom: -6px;
     }
   }
 
   section label {
-    position: relative;
-    @include small-containeur;
-    background-color: map-get($color-palette, default-2);
-    justify-content: space-between;
-    opacity: 0;
+    @include containeur-2;
     .check {
       position: absolute;
+      @include flex_centre;
+      top: 0;
       right: -40px;
-      background-color: rgb(154, 224, 195);
       width: 60px;
       height: 100%;
       border-radius: 0 10px 10px 0;
-      padding: 2px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background-color: rgb(154, 224, 195);
       font-size: map-get($font-size, large);
       opacity: 0;
       transition: all 0.5s ease;
@@ -88,6 +81,19 @@ main {
           }
         }
       }
+    }
+    .text {
+      width: 90%;
+      height: 40px;
+      p {
+        // pour les 3 doth si le text est trop long
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    span {
+      font-weight: map-get($font-weight, large);
     }
   }
 }

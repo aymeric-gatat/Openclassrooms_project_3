@@ -38,23 +38,20 @@
 
 // Apparition
 
+@for $i from 1 to 10 {
+  .c_#{$i} {
+    animation: $i * 0.4s normal apparition;
+  }
+}
+
 @keyframes apparition {
   0% {
     opacity: 0;
   }
   50% {
-    opacity: 0.5s;
+    opacity: 0;
   }
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes test {
-  from {
-    background: red;
-  }
-  to {
-    background-color: blue;
   }
 }

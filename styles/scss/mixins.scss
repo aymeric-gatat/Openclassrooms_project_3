@@ -1,5 +1,13 @@
 @import "variables.scss";
 
+// flex
+
+@mixin flex_centre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 //titre
 @mixin titre {
   font-size: map-get($font-size, title);
@@ -45,7 +53,6 @@
 
 @mixin btn_like {
   .like {
-    grid-area: 2 / 2 / 3 / 3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,6 +66,7 @@
           color: transparent;
           background-size: 400%;
           -webkit-background-clip: text;
+          background-clip: text;
         }
         .fa-regular {
           display: none;
@@ -126,18 +134,21 @@
   overflow: hidden;
   transition: all 0.2s ease-in-out;
   @include ombremain;
-  animation: apparition 0s;
   &:hover {
     @include ombre_hover;
     transform: scale(1.01);
   }
 }
 
-// Boucles
-
-@for $i from 1 to 10 {
-  .c_#{$i} {
-    transition-delay: $i * 1s;
-    opacity: 1;
-  }
+@mixin containeur-2 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: map-get($color-palette, default-2);
+  border-radius: 15px;
+  margin: 10px 0;
+  padding: 10px 20px 10px 10px;
+  @include ombremain;
 }
