@@ -25,6 +25,7 @@ main {
   background-color: map-get($color-palette, light-grey);
   z-index: 1;
   @include btn_like;
+  overflow: hidden;
   .titre {
     display: flex;
     flex-direction: row;
@@ -56,6 +57,7 @@ main {
     @include small-containeur;
     background-color: map-get($color-palette, default-2);
     justify-content: space-between;
+    opacity: 0;
     .check {
       position: absolute;
       right: -40px;
@@ -72,7 +74,6 @@ main {
       transition: all 0.5s ease;
       .fa-solid {
         color: map-get($color-palette, default-2);
-
         transition: all 1s ease;
       }
     }

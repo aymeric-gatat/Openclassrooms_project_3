@@ -1,23 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&family=Shrikhand&display=swap");
-.m-1 {
-  animation-delay: 0.5s;
-  animation: apparition 3s;
+.c_1 {
+  transition-delay: 1s;
+  opacity: 1;
 }
 
-.m-2 {
-  animation-delay: 1s;
-  animation: apparition 6s;
+.c_2 {
+  transition-delay: 2s;
+  opacity: 1;
 }
 
-.m-3 {
-  animation-delay: 1.5s;
-  animation: apparition 9s;
+.c_3 {
+  transition-delay: 3s;
+  opacity: 1;
 }
 
-.m-4 {
-  animation-delay: 2s;
-  animation: apparition 12s;
+.c_4 {
+  transition-delay: 4s;
+  opacity: 1;
+}
+
+.c_5 {
+  transition-delay: 5s;
+  opacity: 1;
+}
+
+.c_6 {
+  transition-delay: 6s;
+  opacity: 1;
+}
+
+.c_7 {
+  transition-delay: 7s;
+  opacity: 1;
+}
+
+.c_8 {
+  transition-delay: 8s;
+  opacity: 1;
+}
+
+.c_9 {
+  transition-delay: 9s;
+  opacity: 1;
 }
 
 /* ===== Animations ====*/
@@ -188,6 +213,7 @@ main {
   border-radius: 50px 50px 0px 0px;
   background-color: #f3f3f3;
   z-index: 1;
+  overflow: hidden;
 }
 main .like {
   grid-area: 2/2/3/3;
@@ -258,6 +284,7 @@ main section label {
   box-shadow: 0px 1px 8px rgba(180, 180, 180, 0.6);
   background-color: #fff;
   justify-content: space-between;
+  opacity: 0;
 }
 main section label:hover {
   background-color: #f5edff;
