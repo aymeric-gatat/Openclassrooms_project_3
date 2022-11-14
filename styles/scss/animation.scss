@@ -38,9 +38,9 @@
 
 // Apparition
 
-@for $i from 1 to 10 {
+@for $i from 1 to 11 {
   .c_#{$i} {
-    animation: $i * 0.4s normal apparition;
+    animation: $i * 0.5s normal apparition;
   }
 }
 

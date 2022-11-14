@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--======================== CSS ===========================-->
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../styles/style_pages.css">
     <!--======================== Icons =========================-->
     <script src="https://kit.fontawesome.com/626653d133.js" crossorigin="anonymous"></script>
     <title>OhMyFood</title>
@@ -16,7 +16,7 @@
     <header>
         <div class="logo">
             <h1>ohmyfood</h1>
-            <a href="../accueil.html">
+            <a href="../index.html">
                 <i class="fa-solid fa-arrow-left-long"></i>
             </a>
         </div>
@@ -25,8 +25,133 @@
             <p>Paris, Belleville</p>
         </div>
     </header>
+    <div class="entete_1 v2">
+        <img src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+    </div>
     <main>
-        <br>
+        <div class="titre">
+            <h2>La palette du gôut</h2>
+            <label for="like_box" class="like">
+                <input type="checkbox" name="like_box" id="like_box">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-heart"></i>
+            </label>
+        </div>
+        <div class="menu">
+            <h3>ENTRÉES</h3>
+            <section class="entree">
+                <label class="containeur c_1" for="entree_1">
+                    <input type="radio" name="entrees" id="entree_1">
+                    <div class="text">
+                        <p><strong>Tartare</strong></p>
+                        <p>Assaisonné au yuzu</p>
+                    </div>
+                    <span>25€</span>
+                    <div class="check">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </label>
+                <label class="containeur c_2" for="entree_2">
+                    <input type="radio" name="entrees" id="entree_2">
+                    <div class="text">
+                        <p><strong>Bouchée de homard croustillant</strong></p>
+                        <p>Et sa farandole de petits légumes</p>
+                    </div>
+                    <span>35€</span>
+                    <div class="check">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </label>
+                <label class="containeur c_3" for="entree_3">
+                    <input type="radio" name="entrees" id="entree_3">
+                    <div class="text">
+                        <p><strong>Velouté de cèpes</strong></p>
+                        <p>Aux truffes</p>
+                    </div>
+                    <span>20€</span>
+                    <div class="check">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </label>
+            </section>
+            <h3>PLATS</h3>
+            <section class="plat">
+                <label class="containeur c_4" for="plat_1">
+                    <input type="radio" name="platsdesserts" id="plat_1">
+                    <div class="text">
+                        <p><strong>Poulet rôti aux herbes de provence</strong></p>
+                        <p>Et sa crème de truffe</p>
+                    </div>
+                    <span>25€</span>
+                    <div class="check">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </label>
+                <label class="containeur c_5" for="plat_2">
+                    <input type="radio" name="platsdesserts" id="plat_2">
+                    <div class="text">
+                        <p><strong>Langouste rôtie</strong></p>
+                        <p>Et ses légumes de saison</p>
+                    </div>
+                    <span>35€</span>
+                    <div class="check">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </label>
+                <label class="containeur c_6" for="plat_3">
+                    <input type="radio" name="platsdesserts" id="plat_3">
+                    <div class="text">
+                        <p><strong>Côte de boeuf angus</strong></p>
+                        <p>Et purée de panais</p>
+                    </div>
+                    <span>44€</span>
+                    <div class="check">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </label>
+            </section>
+            <h3>DESSERTS</h3>
+            <section class="dessert">
+                <label class="containeur c_7" for="dessert_1">
+                    <input type="radio" name="desserts" id="dessert_1">
+                    <div class="text">
+                        <p><strong>Farandole de desserts</strong></p>
+                        <p>Du chef</p>
+                    </div>
+                    <span>18€</span>
+                    <div class="check">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </label>
+                <label class="containeur c_8" for="dessert_2">
+                    <input type="radio" name="desserts" id="dessert_2">
+                    <div class="text">
+                        <p><strong>Crème brulée</strong></p>
+                        <p>Revisitée</p>
+                    </div>
+                    <span>22€</span>
+                    <div class="check">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </label>
+                <label class="containeur c_9" for="dessert_3">
+                    <input type="radio" name="desserts" id="dessert_3">
+                    <div class="text">
+                        <p><strong>Tramisu</strong></p>
+                        <p>À la noisette</p>
+                    </div>
+                    <span>23€</span>
+                    <div class="check">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </label>
+            </section>
+        </div>
+        <div class="commander">
+            <button>
+                <p>Commander</p>
+            </button>
+        </div>
     </main>
     <footer>
         <nav>

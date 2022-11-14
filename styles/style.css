@@ -34,6 +34,53 @@
     -webkit-background-clip: text;
   }
 }
+.c_1 {
+  animation: 0.5s normal apparition;
+}
+
+.c_2 {
+  animation: 1s normal apparition;
+}
+
+.c_3 {
+  animation: 1.5s normal apparition;
+}
+
+.c_4 {
+  animation: 2s normal apparition;
+}
+
+.c_5 {
+  animation: 2.5s normal apparition;
+}
+
+.c_6 {
+  animation: 3s normal apparition;
+}
+
+.c_7 {
+  animation: 3.5s normal apparition;
+}
+
+.c_8 {
+  animation: 4s normal apparition;
+}
+
+.c_9 {
+  animation: 4.5s normal apparition;
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*====== FLECHE RETOUR =====*/
 header .logo a {
   display: none;
@@ -196,6 +243,7 @@ main .fontionnement .small-containeur {
 }
 main .fontionnement .small-containeur:hover {
   background-color: #f5edff;
+  box-shadow: 0px 1px 8px rgba(90, 90, 90, 0.9);
   transform: scale(1.01);
 }
 main .fontionnement .small-containeur:hover .fa-solid {
@@ -227,22 +275,19 @@ main .restaurants h2 {
   margin: 30px 0;
 }
 main .restaurants .containeur-1 {
+  position: relative;
   display: grid;
   grid-template-columns: 2fr 0.7fr;
   grid-template-rows: 2fr 0.7fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  position: relative;
   width: 100%;
   height: 200px;
-  overflow: hidden;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   box-shadow: 0px 1px 8px rgba(180, 180, 180, 0.6);
-  animation: apparition 0s;
   margin: 20px 0;
   background-color: #fff;
   border-radius: 10px;
-  transition: all 0.3s ease-in-out;
 }
 main .restaurants .containeur-1:hover {
   box-shadow: 0px 1px 8px rgba(90, 90, 90, 0.9);
@@ -269,7 +314,6 @@ main .restaurants .containeur-1 .text p {
   font-weight: 300;
 }
 main .restaurants .containeur-1 .like {
-  grid-area: 2/2/3/3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -284,6 +328,7 @@ main .restaurants .containeur-1 .like input:checked ~ .fa-solid {
   color: transparent;
   background-size: 400%;
   -webkit-background-clip: text;
+  background-clip: text;
 }
 main .restaurants .containeur-1 .like input:checked ~ .fa-regular {
   display: none;

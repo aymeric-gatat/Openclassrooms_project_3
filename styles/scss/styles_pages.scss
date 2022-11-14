@@ -12,10 +12,19 @@ header {
 
 //=================== Main ==================
 
-.entete img {
-  position: relative;
-  width: 100%;
-  z-index: -5;
+.entete_1 {
+  height: 220px;
+  img {
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0;
+    z-index: -5;
+  }
+}
+
+.v2 img {
+  object-position: 0 -80px;
 }
 
 main {
@@ -23,6 +32,7 @@ main {
   margin-top: -50px;
   border-radius: 50px 50px 0px 0px;
   background-color: map-get($color-palette, light-grey);
+  overflow: hidden;
   z-index: 1;
   @include btn_like;
   .titre {
@@ -52,7 +62,7 @@ main {
   }
 
   section label {
-    @include containeur-2;
+    @include containeur-plat;
     .check {
       position: absolute;
       @include flex_centre;
@@ -94,6 +104,23 @@ main {
     }
     span {
       font-weight: map-get($font-weight, large);
+    }
+  }
+}
+
+main .commander {
+  @include flex_centre;
+  margin: 60px 0 80px 0;
+  button {
+    @include bouton;
+    @include ombremain;
+    border: none;
+    cursor: pointer;
+    padding: 15px 50px;
+    p {
+      color: map-get($color-palette, default-2);
+      font-weight: map-get($font-weight, normal);
+      font-size: map-get($font-size, medium);
     }
   }
 }
