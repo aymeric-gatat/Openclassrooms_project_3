@@ -1,36 +1,64 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&family=Shrikhand&display=swap");
+header span::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(46, 46, 46, 0.3137254902);
+  z-index: 9;
+  animation: disparition 2s linear forwards;
+}
+header span::after {
+  content: "";
+  position: fixed;
+  top: 50%;
+  z-index: 100;
+  width: 48px;
+  height: 48px;
+  border: 3px solid transparent;
+  border-top-color: #9356dc;
+  border-bottom-color: #ff79da;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: tourne 2s linear forwards;
+}
+
 /* ===== Animations ====*/
 @keyframes like_anim {
   0% {
-    background: linear-gradient(rgba(147, 86, 220, 0.0901960784), rgba(255, 121, 217, 0.0901960784));
-    color: transparent;
+    background: transparent;
     background-size: 400%;
     -webkit-background-clip: text;
   }
-  25% {
-    background: linear-gradient(rgba(147, 86, 220, 0.2549019608), rgba(255, 121, 218, 0.2549019608));
-    color: transparent;
-    background-size: 400%;
+  20% {
+    background: linear-gradient(200deg, rgba(146, 86, 220, 0.1647058824) 34%, rgba(255, 121, 218, 0.1647058824) 100%);
+    background-clip: text;
     -webkit-background-clip: text;
   }
-  50% {
-    background: linear-gradient(rgba(146, 86, 220, 0.5490196078), rgba(255, 121, 218, 0.5490196078));
-    color: transparent;
-    background-size: 400%;
+  40% {
+    background: linear-gradient(200deg, rgba(147, 86, 220, 0.3647058824) 34%, rgba(255, 121, 218, 0.3647058824) 100%);
+    background-clip: text;
     -webkit-background-clip: text;
   }
-  75% {
-    background: linear-gradient(rgba(147, 86, 220, 0.7529411765), rgba(255, 121, 217, 0.7529411765));
-    color: transparent;
-    background-size: 400%;
+  60% {
+    background: linear-gradient(200deg, rgba(147, 86, 220, 0.6039215686) 34%, rgba(255, 121, 218, 0.6039215686) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  80% {
+    background: linear-gradient(200deg, rgba(147, 86, 220, 0.7333333333) 34%, rgba(255, 121, 218, 0.7333333333) 100%);
+    background-clip: text;
     -webkit-background-clip: text;
   }
   100% {
-    background: linear-gradient(#9356dc, #ff79da);
+    background: linear-gradient(200deg, #9356dc 34%, #ff79da 100%);
     color: transparent;
     background-size: 400%;
+    background-clip: text;
     -webkit-background-clip: text;
   }
 }
@@ -42,11 +70,11 @@ header span::before {
   height: 100vh;
   background-color: rgba(46, 46, 46, 0.3137254902);
   z-index: 9;
-  animation: test 2s linear forwards;
+  animation: disparition 2s linear forwards;
 }
 header span::after {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 50%;
   z-index: 100;
   width: 48px;
@@ -71,19 +99,6 @@ header span::after {
   }
   99% {
     opacity: 0;
-  }
-  100% {
-    opacity: 0;
-    z-index: -10;
-  }
-}
-@keyframes test {
-  0% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 1;
-    z-index: 9;
   }
   100% {
     opacity: 0;
@@ -139,6 +154,19 @@ header span::after {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes disparition {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+    z-index: 9;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
   }
 }
 /*====== FLECHE RETOUR =====*/
@@ -246,13 +274,6 @@ footer nav a .titre_footer {
   margin-bottom: 15px;
 }
 
-@media (767px <= width) {
-  header {
-    position: sticky;
-    top: 0;
-    background-color: white;
-  }
-}
 /*============= Body ==============*/
 main {
   /*============ En-Tête =========*/
@@ -261,10 +282,9 @@ main {
 }
 main .entete {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  flex-direction: column;
   background-color: #f3f3f3;
 }
 main .entete h2 {
@@ -282,12 +302,14 @@ main .entete a {
   font-weight: 800;
   border-radius: 50px;
   padding: 15px 20px;
+  z-index: 1;
+  box-shadow: 0px 1px 8px rgba(180, 180, 180, 0.6);
   transition: all 0.3s ease-in-out;
   margin: 50px 0px;
 }
 main .entete a:hover {
-  background: linear-gradient(170deg, #99e2d0 0%, #9356dc 100%);
-  transform: scale(1.05);
+  background: linear-gradient(170deg, #ffb0e9 0%, #ad87db 100%);
+  box-shadow: 0px 1px 6px rgba(70, 70, 70, 0.6);
 }
 main .fontionnement {
   margin: 20px;
@@ -309,9 +331,8 @@ main .fontionnement .small-containeur {
   box-shadow: 0px 1px 8px rgba(180, 180, 180, 0.6);
 }
 main .fontionnement .small-containeur:hover {
-  background-color: #f5edff;
-  box-shadow: 0px 1px 8px rgba(90, 90, 90, 0.9);
-  transform: scale(1.01);
+  background-color: rgba(178, 86, 220, 0.2588235294);
+  box-shadow: 0px 3px 12px 3px rgba(94, 46, 116, 0.2588235294);
 }
 main .fontionnement .small-containeur:hover .fa-solid {
   color: #9356dc;
@@ -357,7 +378,7 @@ main .restaurants .containeur-1 {
   border-radius: 10px;
 }
 main .restaurants .containeur-1:hover {
-  box-shadow: 0px 1px 8px rgba(90, 90, 90, 0.9);
+  box-shadow: 0px 1px 6px rgba(70, 70, 70, 0.6);
   transform: scale(1.01);
 }
 main .restaurants .containeur-1 img {
@@ -382,16 +403,15 @@ main .restaurants .containeur-1 .text p {
 }
 main .restaurants .containeur-1 .like {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 main .restaurants .containeur-1 .like input {
   display: none;
 }
 main .restaurants .containeur-1 .like input:checked ~ .fa-solid {
   display: block;
-  animation: like_anim 0.5s;
-  background: linear-gradient(#9356dc, #ff79da);
+  animation: like_anim 0.8s ease-in-out forwards;
   color: transparent;
   background-size: 400%;
   -webkit-background-clip: text;
@@ -424,7 +444,7 @@ main .restaurants .containeur-1 .new {
 }
 
 /* ====================== Media Queries ====================*/
-@media (767px <= width) {
+@media (767px < width) {
   /*============= Body ==============*/
   main {
     /*============ En-Tête =========*/
@@ -449,12 +469,14 @@ main .restaurants .containeur-1 .new {
     font-weight: 800;
     border-radius: 50px;
     padding: 15px 20px;
+    z-index: 1;
+    box-shadow: 0px 1px 8px rgba(180, 180, 180, 0.6);
     transition: all 0.3s ease-in-out;
     margin: 50px 0px;
   }
   main .entete a:hover {
-    background: linear-gradient(170deg, #99e2d0 0%, #9356dc 100%);
-    transform: scale(1.05);
+    background: linear-gradient(170deg, #ffb0e9 0%, #ad87db 100%);
+    box-shadow: 0px 1px 6px rgba(70, 70, 70, 0.6);
   }
   main .fontionnement {
     display: flex;
@@ -480,9 +502,8 @@ main .restaurants .containeur-1 .new {
     width: 25%;
   }
   main .fontionnement .small-containeur:hover {
-    background-color: #f5edff;
-    box-shadow: 0px 1px 8px rgba(90, 90, 90, 0.9);
-    transform: scale(1.01);
+    background-color: rgba(178, 86, 220, 0.2588235294);
+    box-shadow: 0px 3px 12px 3px rgba(94, 46, 116, 0.2588235294);
   }
   main .fontionnement .small-containeur:hover .fa-solid {
     color: #9356dc;

@@ -3,33 +3,35 @@
 //============== Animation Like ============
 @keyframes like_anim {
   0% {
-    background: linear-gradient(#9356dc17, #ff79d917);
-    color: transparent;
+    background: transparent;
     background-size: 400%;
     -webkit-background-clip: text;
   }
-  25% {
-    background: linear-gradient(#9356dc41, #ff79da41);
-    color: transparent;
-    background-size: 400%;
+  20% {
+    background: linear-gradient(200deg, #9256dc2a 34%, #ff79da2a 100%);
+    background-clip: text;
     -webkit-background-clip: text;
   }
-  50% {
-    background: linear-gradient(#9256dc8c, #ff79da8c);
-    color: transparent;
-    background-size: 400%;
+  40% {
+    background: linear-gradient(200deg, #9356dc5d 34%, #ff79da5d 100%);
+    background-clip: text;
     -webkit-background-clip: text;
   }
-  75% {
-    background: linear-gradient(#9356dcc0, #ff79d9c0);
-    color: transparent;
-    background-size: 400%;
+  60% {
+    background: linear-gradient(200deg, #9356dc9a 34%, #ff79da9a 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  80% {
+    background: linear-gradient(200deg, #9356dcbb 34%, #ff79dabb 100%);
+    background-clip: text;
     -webkit-background-clip: text;
   }
   100% {
-    background: linear-gradient(#9356dc, #ff79da);
+    background: linear-gradient(200deg, #9356dc 34%, #ff79da 100%);
     color: transparent;
     background-size: 400%;
+    background-clip: text;
     -webkit-background-clip: text;
   }
 }
@@ -45,11 +47,11 @@ header span {
     height: 100vh;
     background-color: #2e2e2e50;
     z-index: 9;
-    animation: test 2s linear forwards;
+    animation: disparition 2s linear forwards;
   }
   &::after {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 50%;
     z-index: 100;
     width: 48px;
@@ -64,6 +66,8 @@ header span {
   }
 }
 
+// Rotation
+
 @keyframes tourne {
   0% {
     transform: rotate(0);
@@ -75,20 +79,6 @@ header span {
   }
   99% {
     opacity: 0;
-  }
-  100% {
-    opacity: 0;
-    z-index: -10;
-  }
-}
-
-@keyframes test {
-  0% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 1;
-    z-index: 9;
   }
   100% {
     opacity: 0;
@@ -113,5 +103,21 @@ header span {
   }
   100% {
     opacity: 1;
+  }
+}
+
+// Disparition
+
+@keyframes disparition {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+    z-index: 9;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
   }
 }

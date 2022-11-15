@@ -14,11 +14,8 @@ header .logo a {
 main {
   /*============ En-Tête =========*/
   .entete {
-    display: flex;
+    @include flex_centre;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     background-color: map-get($color-palette, light-grey);
     h2 {
       margin: 30px 0px 15px 0px;
@@ -106,7 +103,7 @@ main {
 
 /* ====================== Media Queries ====================*/
 
-@media (767px <= width) {
+@media (767px < width) {
   /*============= Body ==============*/
 
   main {
