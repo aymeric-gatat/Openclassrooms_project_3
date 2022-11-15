@@ -143,8 +143,10 @@ main {
     .restaurants {
       display: flex;
       flex-flow: row wrap;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: flex-start;
+      width: 85%;
+      padding: 20px 7.5%;
       h2 {
         width: 100%;
         margin: 10px 0;

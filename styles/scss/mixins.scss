@@ -62,10 +62,6 @@
         .fa-solid {
           display: block;
           animation: like_anim 0.8s ease-in-out forwards;
-          color: transparent;
-          background-size: 400%;
-          -webkit-background-clip: text;
-          background-clip: text;
         }
         .fa-regular {
           display: none;
@@ -149,7 +145,6 @@
   background-color: map-get($color-palette, default-2);
   border-radius: 15px;
   margin: 10px 0;
-  padding: 10px 20px 10px 10px;
   @include ombremain;
 }
 
@@ -171,8 +166,8 @@ header span {
     position: fixed;
     top: 50%;
     z-index: 100;
-    width: 48px;
-    height: 48px;
+    width: 68px;
+    height: 68px;
     border: 3px solid transparent;
     border-top-color: map-get($color-palette, primaire);
     border-bottom-color: map-get($color-palette, secondaire);

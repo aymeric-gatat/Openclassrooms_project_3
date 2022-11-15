@@ -14,6 +14,7 @@ header {
 
 .entete_1 {
   height: 220px;
+  overflow: hidden;
   img {
     position: relative;
     width: 100%;
@@ -68,12 +69,13 @@ main {
       @include flex_centre;
       top: 0;
       right: -40px;
-      width: 60px;
-      height: 100%;
+      width: 50px;
+      height: 60px;
       border-radius: 0 10px 10px 0;
       background-color: rgb(154, 224, 195);
-      font-size: map-get($font-size, large);
+      font-size: map-get($font-size, medium);
       opacity: 0;
+      margin: 0;
       transition: all 0.5s ease;
       .fa-solid {
         color: map-get($color-palette, default-2);
@@ -84,6 +86,7 @@ main {
       display: none;
       &:checked ~ {
         .check {
+          position: relative;
           opacity: 1;
           right: 0;
           .fa-solid {
@@ -93,8 +96,9 @@ main {
       }
     }
     .text {
-      width: 90%;
+      width: 60%;
       height: 40px;
+      margin: 10px 10px;
       p {
         // pour les 3 doth si le text est trop long
         white-space: nowrap;
@@ -104,6 +108,7 @@ main {
     }
     span {
       font-weight: map-get($font-weight, large);
+      margin: 10px 10px;
     }
   }
 }
@@ -121,6 +126,43 @@ main .commander {
       color: map-get($color-palette, default-2);
       font-weight: map-get($font-weight, normal);
       font-size: map-get($font-size, medium);
+    }
+  }
+}
+
+/* ====================== Media Queries ====================*/
+
+@media (767px < width) {
+  .entete_1 {
+    height: 500px;
+    img {
+      object-position: 0 -300px;
+    }
+  }
+  main {
+    .titre {
+      justify-content: flex-start;
+      label {
+        margin-left: 20px;
+      }
+    }
+    .menu {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 400px;
+      h3 {
+        width: 32%;
+      }
+      section {
+        width: 32%;
+        height: 80%;
+        margin: 0;
+      }
+    }
+    .commander {
+      margin: 20px;
     }
   }
 }

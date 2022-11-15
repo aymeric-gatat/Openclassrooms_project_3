@@ -36,36 +36,6 @@
   }
 }
 
-// Loader
-
-header span {
-  &::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #2e2e2e50;
-    z-index: 9;
-    animation: disparition 2s linear forwards;
-  }
-  &::after {
-    content: "";
-    position: fixed;
-    top: 50%;
-    z-index: 100;
-    width: 48px;
-    height: 48px;
-    border: 3px solid transparent;
-    border-top-color: map-get($color-palette, primaire);
-    border-bottom-color: map-get($color-palette, secondaire);
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: tourne 2s linear forwards;
-  }
-}
-
 // Rotation
 
 @keyframes tourne {

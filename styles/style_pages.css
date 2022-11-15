@@ -1,36 +1,81 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&family=Shrikhand&display=swap");
+header span::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(46, 46, 46, 0.3137254902);
+  z-index: 9;
+  animation: disparition 2s linear forwards;
+}
+header span::after {
+  content: "";
+  position: fixed;
+  top: 50%;
+  z-index: 100;
+  width: 68px;
+  height: 68px;
+  border: 3px solid transparent;
+  border-top-color: #9356dc;
+  border-bottom-color: #ff79da;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: tourne 2s linear forwards;
+}
+
 /* ===== Animations ====*/
 @keyframes like_anim {
   0% {
-    background: linear-gradient(rgba(147, 86, 220, 0.0901960784), rgba(255, 121, 217, 0.0901960784));
-    color: transparent;
+    background: transparent;
     background-size: 400%;
     -webkit-background-clip: text;
   }
-  25% {
-    background: linear-gradient(rgba(147, 86, 220, 0.2549019608), rgba(255, 121, 218, 0.2549019608));
-    color: transparent;
-    background-size: 400%;
+  20% {
+    background: linear-gradient(200deg, rgba(146, 86, 220, 0.1647058824) 34%, rgba(255, 121, 218, 0.1647058824) 100%);
+    background-clip: text;
     -webkit-background-clip: text;
   }
-  50% {
-    background: linear-gradient(rgba(146, 86, 220, 0.5490196078), rgba(255, 121, 218, 0.5490196078));
-    color: transparent;
-    background-size: 400%;
+  40% {
+    background: linear-gradient(200deg, rgba(147, 86, 220, 0.3647058824) 34%, rgba(255, 121, 218, 0.3647058824) 100%);
+    background-clip: text;
     -webkit-background-clip: text;
   }
-  75% {
-    background: linear-gradient(rgba(147, 86, 220, 0.7529411765), rgba(255, 121, 217, 0.7529411765));
-    color: transparent;
-    background-size: 400%;
+  60% {
+    background: linear-gradient(200deg, rgba(147, 86, 220, 0.6039215686) 34%, rgba(255, 121, 218, 0.6039215686) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  80% {
+    background: linear-gradient(200deg, rgba(147, 86, 220, 0.7333333333) 34%, rgba(255, 121, 218, 0.7333333333) 100%);
+    background-clip: text;
     -webkit-background-clip: text;
   }
   100% {
-    background: linear-gradient(#9356dc, #ff79da);
+    background: linear-gradient(200deg, #9356dc 34%, #ff79da 100%);
     color: transparent;
     background-size: 400%;
+    background-clip: text;
     -webkit-background-clip: text;
+  }
+}
+@keyframes tourne {
+  0% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+  90% {
+    transform: rotate(720deg);
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
   }
 }
 .c_1 {
@@ -82,6 +127,19 @@
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes disparition {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+    z-index: 9;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
   }
 }
 * {
@@ -190,6 +248,7 @@ header .localisation {
 
 .entete_1 {
   height: 220px;
+  overflow: hidden;
 }
 .entete_1 img {
   position: relative;
@@ -213,20 +272,15 @@ main {
 }
 main .like {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 main .like input {
   display: none;
 }
 main .like input:checked ~ .fa-solid {
   display: block;
-  animation: like_anim 0.5s;
-  background: linear-gradient(#9356dc, #ff79da);
-  color: transparent;
-  background-size: 400%;
-  -webkit-background-clip: text;
-  background-clip: text;
+  animation: like_anim 0.8s ease-in-out forwards;
 }
 main .like input:checked ~ .fa-regular {
   display: none;
@@ -275,7 +329,6 @@ main section label {
   background-color: #fff;
   border-radius: 15px;
   margin: 10px 0;
-  padding: 10px 20px 10px 10px;
   box-shadow: 0px 1px 8px rgba(180, 180, 180, 0.6);
 }
 main section label .check {
@@ -285,12 +338,13 @@ main section label .check {
   align-items: center;
   top: 0;
   right: -40px;
-  width: 60px;
-  height: 100%;
+  width: 50px;
+  height: 60px;
   border-radius: 0 10px 10px 0;
   background-color: rgb(154, 224, 195);
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   opacity: 0;
+  margin: 0;
   transition: all 0.5s ease;
 }
 main section label .check .fa-solid {
@@ -301,6 +355,7 @@ main section label input {
   display: none;
 }
 main section label input:checked ~ .check {
+  position: relative;
   opacity: 1;
   right: 0;
 }
@@ -308,8 +363,9 @@ main section label input:checked ~ .check .fa-solid {
   rotate: 360deg;
 }
 main section label .text {
-  width: 90%;
+  width: 60%;
   height: 40px;
+  margin: 10px 10px;
 }
 main section label .text p {
   white-space: nowrap;
@@ -318,6 +374,7 @@ main section label .text p {
 }
 main section label span {
   font-weight: 800;
+  margin: 10px 10px;
 }
 
 main .commander {
@@ -332,6 +389,8 @@ main .commander button {
   font-weight: 800;
   border-radius: 50px;
   padding: 15px 20px;
+  z-index: 1;
+  box-shadow: 0px 1px 8px rgba(180, 180, 180, 0.6);
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 1px 8px rgba(180, 180, 180, 0.6);
   border: none;
@@ -339,13 +398,47 @@ main .commander button {
   padding: 15px 50px;
 }
 main .commander button:hover {
-  background: linear-gradient(170deg, #99e2d0 0%, #9356dc 100%);
-  transform: scale(1.05);
+  background: linear-gradient(170deg, #ffb0e9 0%, #ad87db 100%);
+  box-shadow: 0px 1px 6px rgba(70, 70, 70, 0.6);
 }
 main .commander button p {
   color: #fff;
   font-weight: 500;
   font-size: 1.1rem;
+}
+
+/* ====================== Media Queries ====================*/
+@media (767px < width) {
+  .entete_1 {
+    height: 500px;
+  }
+  .entete_1 img {
+    object-position: 0 -300px;
+  }
+  main .titre {
+    justify-content: flex-start;
+  }
+  main .titre label {
+    margin-left: 20px;
+  }
+  main .menu {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+  }
+  main .menu h3 {
+    width: 32%;
+  }
+  main .menu section {
+    width: 32%;
+    height: 80%;
+    margin: 0;
+  }
+  main .commander {
+    margin: 20px;
+  }
 }
 
 /*# sourceMappingURL=style_pages.css.map */

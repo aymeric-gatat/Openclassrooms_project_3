@@ -18,7 +18,7 @@ header span::after {
   z-index: 100;
   width: 48px;
   height: 48px;
-  border: 3px solid transparent;
+  border: 30px solid transparent;
   border-top-color: #9356dc;
   border-bottom-color: #ff79da;
   border-radius: 50%;
@@ -412,10 +412,6 @@ main .restaurants .containeur-1 .like input {
 main .restaurants .containeur-1 .like input:checked ~ .fa-solid {
   display: block;
   animation: like_anim 0.8s ease-in-out forwards;
-  color: transparent;
-  background-size: 400%;
-  -webkit-background-clip: text;
-  background-clip: text;
 }
 main .restaurants .containeur-1 .like input:checked ~ .fa-regular {
   display: none;
@@ -511,8 +507,10 @@ main .restaurants .containeur-1 .new {
   main .restaurants {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
+    width: 85%;
+    padding: 20px 7.5%;
   }
   main .restaurants h2 {
     width: 100%;
