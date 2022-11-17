@@ -3,8 +3,8 @@
 //============== Animation Like ============
 @keyframes like_anim {
   0% {
-    background: transparent;
     background-size: 400%;
+    background-clip: text;
     -webkit-background-clip: text;
   }
   20% {

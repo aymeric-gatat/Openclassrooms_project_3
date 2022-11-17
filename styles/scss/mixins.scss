@@ -155,8 +155,8 @@ header span {
     content: "";
     position: fixed;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: #2e2e2e50;
     z-index: 9;
     animation: disparition 2s linear forwards;

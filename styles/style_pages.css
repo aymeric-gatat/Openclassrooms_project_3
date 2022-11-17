@@ -375,6 +375,7 @@ main section label .text p {
 main section label span {
   font-weight: 800;
   margin: 10px 10px;
+  transition: all 0.5s ease;
 }
 
 main .commander {
