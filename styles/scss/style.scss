@@ -73,6 +73,9 @@ main {
       margin: 20px 0;
       background-color: map-get($color-palette, default-2);
       border-radius: 10px;
+      a {
+        @include containeur-resto;
+      }
       img {
         grid-area: 1 / 1 / 2 / 4;
         overflow: hidden;
@@ -98,6 +101,10 @@ main {
         display: none;
       }
       @include new;
+    }
+    .like {
+      bottom: 10%;
+      right: 5%;
     }
   }
 }
