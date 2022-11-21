@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&family=Shrikhand&display=swap");
 header span::before {
   content: "";
   position: fixed;
@@ -241,7 +240,7 @@ header .localisation {
   position: relative;
   width: 100%;
   object-fit: cover;
-  object-position: 0;
+  object-position: 0 -80px;
   z-index: -5;
 }
 
@@ -409,6 +408,12 @@ main .commander button p {
   }
   .entete_1 img {
     object-position: 0 -300px;
+  }
+  .v2 {
+    height: 500px;
+  }
+  .v2 img {
+    object-position: 0 -60px;
   }
   main .titre {
     justify-content: flex-start;

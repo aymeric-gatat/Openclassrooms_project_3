@@ -19,7 +19,7 @@ header {
     position: relative;
     width: 100%;
     object-fit: cover;
-    object-position: 0;
+    object-position: 0 -80px;
     z-index: -5;
   }
 }
@@ -144,6 +144,14 @@ main .commander {
       object-position: 0 -300px;
     }
   }
+
+  .v2 {
+    height: 500px;
+    img {
+      object-position: 0 -60px;
+    }
+  }
+
   main {
     .titre {
       justify-content: flex-start;
