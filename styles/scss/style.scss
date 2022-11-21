@@ -2,9 +2,24 @@
 @import "mixins.scss";
 @import "animation.scss";
 
-/*====== FLECHE RETOUR =====*/
-header .logo a {
-  display: none;
+/*====== FLECHE RETOUR & LOADER =====*/
+header {
+  .logo a {
+    display: none;
+  }
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: loader 2.5s;
+    span {
+      position: absolute;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      animation: spin 2s;
+    }
+  }
 }
 
 @import "header-footer.scss";
@@ -25,6 +40,7 @@ main {
     p {
       font-size: map-get($font-size, small);
       color: #4d4d4d;
+      text-align: center;
       margin: 0 10px;
     }
     a {
@@ -124,6 +140,7 @@ main {
       }
       p {
         font-size: map-get($font-size, small);
+        text-align: center;
         color: #4d4d4d;
         margin: 0 10px;
       }

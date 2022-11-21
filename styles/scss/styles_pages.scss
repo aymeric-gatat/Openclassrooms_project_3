@@ -29,6 +29,7 @@ header {
 }
 
 main {
+  position: relative;
   padding: 30px 20px 10px 20px;
   margin-top: -50px;
   border-radius: 50px 50px 0px 0px;
@@ -36,6 +37,9 @@ main {
   overflow: hidden;
   z-index: 1;
   @include btn_like;
+  .like {
+    right: 25px;
+  }
   .titre {
     display: flex;
     flex-direction: row;
@@ -96,7 +100,7 @@ main {
       }
     }
     .text {
-      width: 60%;
+      width: 65%;
       height: 40px;
       margin: 10px 10px;
       p {

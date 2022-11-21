@@ -56,13 +56,14 @@
 @mixin btn_like {
   .like {
     position: absolute;
-    cursor: pointer;
     @include flex_centre;
+    cursor: pointer;
     input {
       display: none;
       &:checked ~ {
         .fa-solid {
           display: block;
+          color: transparent;
           animation: like_anim 0.8s ease-in-out forwards;
         }
         .fa-regular {

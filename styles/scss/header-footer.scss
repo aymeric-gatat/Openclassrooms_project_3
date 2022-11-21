@@ -10,7 +10,7 @@
 body {
   background: map-get($color-palette, bg-color);
   max-width: 1920px;
-  min-width: 300px;
+  min-width: 280px;
 }
 
 //=========== Header =========
@@ -55,19 +55,6 @@ header {
     padding: 10px 0;
     .fa-solid {
       padding: 0 10px;
-    }
-  }
-  .loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: loader 2.5s;
-    span {
-      position: absolute;
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      animation: spin 2s;
     }
   }
 }

@@ -143,9 +143,22 @@ header span::after {
     z-index: -10;
   }
 }
-/*====== FLECHE RETOUR =====*/
+/*====== FLECHE RETOUR & LOADER =====*/
 header .logo a {
   display: none;
+}
+header .loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loader 2.5s;
+}
+header .loader span {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  animation: spin 2s;
 }
 
 * {
@@ -160,7 +173,7 @@ header .logo a {
 body {
   background: #fefefe;
   max-width: 1920px;
-  min-width: 300px;
+  min-width: 280px;
 }
 
 header {
@@ -207,19 +220,6 @@ header .localisation {
 }
 header .localisation .fa-solid {
   padding: 0 10px;
-}
-header .loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: loader 2.5s;
-}
-header .loader span {
-  position: absolute;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  animation: spin 2s;
 }
 
 footer {
@@ -269,6 +269,7 @@ main .entete h2 {
 main .entete p {
   font-size: 0.9rem;
   color: #4d4d4d;
+  text-align: center;
   margin: 0 10px;
 }
 main .entete a {
@@ -396,16 +397,17 @@ main .restaurants .containeur-1 .text p {
 }
 main .restaurants .containeur-1 .like {
   position: absolute;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 main .restaurants .containeur-1 .like input {
   display: none;
 }
 main .restaurants .containeur-1 .like input:checked ~ .fa-solid {
   display: block;
+  color: transparent;
   animation: like_anim 0.8s ease-in-out forwards;
 }
 main .restaurants .containeur-1 .like input:checked ~ .fa-regular {
@@ -455,6 +457,7 @@ main .restaurants .like {
   }
   main .entete p {
     font-size: 0.9rem;
+    text-align: center;
     color: #4d4d4d;
     margin: 0 10px;
   }
