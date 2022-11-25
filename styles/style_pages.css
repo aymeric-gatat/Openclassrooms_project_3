@@ -233,19 +233,13 @@ header .localisation {
 }
 
 .entete_1 {
-  height: 220px;
+  height: max-content;
   overflow: hidden;
 }
 .entete_1 img {
   position: relative;
   width: 100%;
   object-fit: cover;
-  object-position: 0 -80px;
-  z-index: -5;
-}
-
-.v2 img {
-  object-position: 0 -80px;
 }
 
 main {
@@ -404,16 +398,10 @@ main .commander button p {
 /* ====================== Media Queries ====================*/
 @media (767px < width) {
   .entete_1 {
-    height: 500px;
+    height: 40vh;
   }
   .entete_1 img {
-    object-position: 0 -300px;
-  }
-  .v2 {
-    height: 500px;
-  }
-  .v2 img {
-    object-position: 0 -60px;
+    object-position: 0 -20vh;
   }
   main .titre {
     justify-content: flex-start;
@@ -438,6 +426,14 @@ main .commander button p {
   }
   main .commander {
     margin: 20px;
+  }
+}
+@media (767px < width < 950px) {
+  .entete_1 {
+    height: 30vh;
+  }
+  .entete_1 img {
+    object-position: 0 -15vh;
   }
 }
 

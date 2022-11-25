@@ -13,19 +13,13 @@ header {
 //=================== Main ==================
 
 .entete_1 {
-  height: 220px;
+  height: max-content;
   overflow: hidden;
   img {
     position: relative;
     width: 100%;
     object-fit: cover;
-    object-position: 0 -80px;
-    z-index: -5;
   }
-}
-
-.v2 img {
-  object-position: 0 -80px;
 }
 
 main {
@@ -139,16 +133,9 @@ main .commander {
 
 @media (767px < width) {
   .entete_1 {
-    height: 500px;
+    height: 40vh;
     img {
-      object-position: 0 -300px;
-    }
-  }
-
-  .v2 {
-    height: 500px;
-    img {
-      object-position: 0 -60px;
+      object-position: 0 -20vh;
     }
   }
 
@@ -176,6 +163,17 @@ main .commander {
     }
     .commander {
       margin: 20px;
+    }
+  }
+}
+
+// ============== Tablette ===========
+
+@media (767px < width < 950px) {
+  .entete_1 {
+    height: 30vh;
+    img {
+      object-position: 0 -15vh;
     }
   }
 }
