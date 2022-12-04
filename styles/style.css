@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&family=Shrikhand&display=swap");
-
 header span::before {
   content: "";
   position: fixed;
@@ -11,7 +10,6 @@ header span::before {
   z-index: 9;
   animation: disparition 2s linear forwards;
 }
-
 header span::after {
   content: "";
   position: fixed;
@@ -35,31 +33,26 @@ header span::after {
     background-clip: text;
     -webkit-background-clip: text;
   }
-
   20% {
     background: linear-gradient(200deg, rgba(146, 86, 220, 0.1647058824) 34%, rgba(255, 121, 218, 0.1647058824) 100%);
     background-clip: text;
     -webkit-background-clip: text;
   }
-
   40% {
     background: linear-gradient(200deg, rgba(147, 86, 220, 0.3647058824) 34%, rgba(255, 121, 218, 0.3647058824) 100%);
     background-clip: text;
     -webkit-background-clip: text;
   }
-
   60% {
     background: linear-gradient(200deg, rgba(147, 86, 220, 0.6039215686) 34%, rgba(255, 121, 218, 0.6039215686) 100%);
     background-clip: text;
     -webkit-background-clip: text;
   }
-
   80% {
     background: linear-gradient(200deg, rgba(147, 86, 220, 0.7333333333) 34%, rgba(255, 121, 218, 0.7333333333) 100%);
     background-clip: text;
     -webkit-background-clip: text;
   }
-
   100% {
     background: linear-gradient(200deg, #9356dc 34%, #ff79da 100%);
     color: transparent;
@@ -68,28 +61,23 @@ header span::after {
     -webkit-background-clip: text;
   }
 }
-
 @keyframes tourne {
   0% {
     transform: rotate(0);
     opacity: 1;
   }
-
   90% {
     transform: rotate(720deg);
     opacity: 1;
   }
-
   99% {
     opacity: 0;
   }
-
   100% {
     opacity: 0;
     z-index: -10;
   }
 }
-
 .c_1 {
   animation: 0.5s normal apparition;
 }
@@ -134,44 +122,36 @@ header span::after {
   0% {
     opacity: 0;
   }
-
   50% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
 }
-
 @keyframes disparition {
   0% {
     opacity: 1;
   }
-
   99% {
     opacity: 1;
     z-index: 9;
   }
-
   100% {
     opacity: 0;
     z-index: -10;
   }
 }
-
 /*====== FLECHE RETOUR & LOADER =====*/
 header .logo a {
   display: none;
 }
-
 header .loader {
   display: flex;
   justify-content: center;
   align-items: center;
   animation: loader 2.5s;
 }
-
 header .loader span {
   position: absolute;
   width: 56px;
@@ -202,7 +182,6 @@ header {
   justify-content: center;
   align-items: center;
 }
-
 header .logo {
   position: relative;
   display: flex;
@@ -213,27 +192,22 @@ header .logo {
   padding: 5px 0;
   box-shadow: 0px 1px 5px rgba(74, 74, 74, 0.6);
 }
-
 header .logo h1 {
   font-size: 1.6rem;
   font-weight: 500;
   font-family: "Shrikhand", cursive;
   transition: all 0.3s ease-in-out;
 }
-
 header .logo h1:hover {
   transform: scale(1.05);
 }
-
 header .logo a {
   position: absolute;
   left: 20px;
 }
-
 header .logo .fa-solid {
   font-size: 1.1rem;
 }
-
 header .localisation {
   display: flex;
   flex-direction: row;
@@ -243,7 +217,6 @@ header .localisation {
   background-color: #e2e2e2;
   padding: 10px 0;
 }
-
 header .localisation .fa-solid {
   padding: 0 10px;
 }
@@ -252,15 +225,12 @@ footer {
   background: #353535;
   width: 100%;
 }
-
 footer nav {
   padding: 20px 15px;
 }
-
 footer nav a {
   display: flex;
 }
-
 footer nav a p,
 footer nav a .fa-solid {
   color: #fff;
@@ -268,12 +238,9 @@ footer nav a .fa-solid {
   margin: 3px 3px;
   transition: color 0.3s ease-in-out;
 }
-
-footer nav a:hover p:not(.titre_footer),
-footer nav a:hover .fa-solid {
+footer nav a:hover p:not(.titre_footer), footer nav a:hover .fa-solid {
   color: #99e2d0;
 }
-
 footer nav a .titre_footer {
   font-family: "Shrikhand", cursive;
   font-size: 1.1rem;
@@ -286,7 +253,6 @@ main {
   /*============ Fonctionnement =========*/
   /*============ Restaurants =========*/
 }
-
 main .entete {
   display: flex;
   justify-content: center;
@@ -294,20 +260,17 @@ main .entete {
   flex-direction: column;
   background-color: #f3f3f3;
 }
-
 main .entete h2 {
   margin: 30px 0px 15px 0px;
   font-size: 1.4rem;
   text-align: center;
 }
-
 main .entete p {
   font-size: 0.9rem;
   color: #4d4d4d;
   text-align: center;
   margin: 0 10px;
 }
-
 main .entete a {
   background: linear-gradient(170deg, #ff79da 0%, #9356dc 100%);
   color: #fff;
@@ -319,21 +282,17 @@ main .entete a {
   transition: all 0.3s ease-in-out;
   margin: 50px 0px;
 }
-
 main .entete a:hover {
   background: linear-gradient(170deg, #ffb0e9 0%, #ad87db 100%);
   box-shadow: 0px 1px 6px rgba(70, 70, 70, 0.6);
 }
-
 main .fontionnement {
   margin: 20px;
 }
-
 main .fontionnement h2 {
   font-size: 1.4rem;
   margin: 30px 0;
 }
-
 main .fontionnement .small-containeur {
   position: relative;
   display: flex;
@@ -346,26 +305,21 @@ main .fontionnement .small-containeur {
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 1px 8px rgba(180, 180, 180, 0.6);
 }
-
 main .fontionnement .small-containeur:hover {
   background-color: rgba(178, 86, 220, 0.2588235294);
   box-shadow: 0px 3px 12px 3px rgba(94, 46, 116, 0.2588235294);
 }
-
 main .fontionnement .small-containeur:hover .fa-solid {
   color: #9356dc;
 }
-
 main .fontionnement .small-containeur p {
   font-size: 0.9rem;
   font-weight: 800;
 }
-
 main .fontionnement .small-containeur .fa-solid {
   margin-right: 15px;
   transition: all 0.3s ease-in-out;
 }
-
 main .fontionnement .small-containeur span {
   position: absolute;
   left: -10px;
@@ -375,17 +329,14 @@ main .fontionnement .small-containeur span {
   color: #fff;
   background-color: #9356dc;
 }
-
 main .restaurants {
   padding: 20px 20px;
   background-color: #f3f3f3;
 }
-
 main .restaurants h2 {
   font-size: 1.4rem;
   margin: 30px 0;
 }
-
 main .restaurants .containeur-1 {
   position: relative;
   display: grid;
@@ -402,12 +353,10 @@ main .restaurants .containeur-1 {
   background-color: #fff;
   border-radius: 10px;
 }
-
 main .restaurants .containeur-1:hover {
   box-shadow: 0px 1px 6px rgba(70, 70, 70, 0.6);
   transform: scale(1.01);
 }
-
 main .restaurants .containeur-1 a {
   position: relative;
   display: grid;
@@ -421,12 +370,10 @@ main .restaurants .containeur-1 a {
   overflow: hidden;
   box-shadow: 0px 1px 8px rgba(180, 180, 180, 0.6);
 }
-
 main .restaurants .containeur-1 a:hover {
   box-shadow: 0px 1px 6px rgba(70, 70, 70, 0.6);
   transform: scale(1.01);
 }
-
 main .restaurants .containeur-1 img {
   grid-area: 1/1/2/4;
   overflow: hidden;
@@ -435,22 +382,18 @@ main .restaurants .containeur-1 img {
   object-fit: cover;
   object-position: center;
 }
-
 main .restaurants .containeur-1 .text {
   margin: 20px 15px;
   grid-area: 2/1/3/2;
 }
-
 main .restaurants .containeur-1 .text h3 {
   font-size: 0.9rem;
   font-weight: 800;
 }
-
 main .restaurants .containeur-1 .text p {
   font-size: 0.9rem;
   font-weight: 300;
 }
-
 main .restaurants .containeur-1 .like {
   position: absolute;
   display: flex;
@@ -458,34 +401,27 @@ main .restaurants .containeur-1 .like {
   align-items: center;
   cursor: pointer;
 }
-
 main .restaurants .containeur-1 .like input {
   display: none;
 }
-
-main .restaurants .containeur-1 .like input:checked~.fa-solid {
+main .restaurants .containeur-1 .like input:hover ~ .fa-solid, main .restaurants .containeur-1 .like input:checked ~ .fa-solid {
   display: block;
   color: transparent;
   animation: like_anim 0.8s ease-in-out forwards;
 }
-
-main .restaurants .containeur-1 .like input:checked~.fa-regular {
+main .restaurants .containeur-1 .like input:hover ~ .fa-regular, main .restaurants .containeur-1 .like input:checked ~ .fa-regular {
   display: none;
 }
-
 main .restaurants .containeur-1 .like .fa-regular,
 main .restaurants .containeur-1 .like .fa-solid {
   font-size: 1.7rem;
 }
-
 main .restaurants .containeur-1 .like .fa-solid {
   display: none;
 }
-
 main .restaurants .containeur-1 span {
   display: none;
 }
-
 main .restaurants .containeur-1 .new {
   display: block;
   position: absolute;
@@ -498,7 +434,6 @@ main .restaurants .containeur-1 .new {
   right: 5px;
   border-radius: 2px;
 }
-
 main .restaurants .like {
   bottom: 10%;
   right: 5%;
@@ -506,30 +441,25 @@ main .restaurants .like {
 
 /* ====================== Media Queries ====================*/
 @media (767px < width) {
-
   /*============= Body ==============*/
   main {
     /*============ En-Tête =========*/
     /*============ Fonctionnement =========*/
     /*============ Restaurants =========*/
   }
-
   main .entete {
     height: 250px;
   }
-
   main .entete h2 {
     margin: 30px 0px 15px 0px;
     font-size: 1.4rem;
   }
-
   main .entete p {
     font-size: 0.9rem;
     text-align: center;
     color: #4d4d4d;
     margin: 0 10px;
   }
-
   main .entete a {
     background: linear-gradient(170deg, #ff79da 0%, #9356dc 100%);
     color: #fff;
@@ -541,24 +471,20 @@ main .restaurants .like {
     transition: all 0.3s ease-in-out;
     margin: 50px 0px;
   }
-
   main .entete a:hover {
     background: linear-gradient(170deg, #ffb0e9 0%, #ad87db 100%);
     box-shadow: 0px 1px 6px rgba(70, 70, 70, 0.6);
   }
-
   main .fontionnement {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     margin: 10px;
   }
-
   main .fontionnement h2 {
     margin: 10px 0;
     width: 100%;
   }
-
   main .fontionnement .small-containeur {
     position: relative;
     display: flex;
@@ -572,16 +498,13 @@ main .restaurants .like {
     box-shadow: 0px 1px 8px rgba(180, 180, 180, 0.6);
     width: 25%;
   }
-
   main .fontionnement .small-containeur:hover {
     background-color: rgba(178, 86, 220, 0.2588235294);
     box-shadow: 0px 3px 12px 3px rgba(94, 46, 116, 0.2588235294);
   }
-
   main .fontionnement .small-containeur:hover .fa-solid {
     color: #9356dc;
   }
-
   main .restaurants {
     display: flex;
     flex-flow: row wrap;
@@ -590,16 +513,13 @@ main .restaurants .like {
     width: 85%;
     padding: 20px 7.5%;
   }
-
   main .restaurants h2 {
     width: 100%;
     margin: 10px 0;
   }
-
   main .restaurants .containeur-1 {
     width: 300px;
   }
-
   main .restaurants .containeur-1 img {
     border-radius: 15px 15px 0 0;
     overflow: hidden;

@@ -235,11 +235,13 @@ header .localisation {
 .entete_1 {
   height: max-content;
   overflow: hidden;
+  max-height: 200px;
 }
 .entete_1 img {
   position: relative;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: 0 -10vw;
 }
 
 main {
@@ -261,12 +263,12 @@ main .like {
 main .like input {
   display: none;
 }
-main .like input:checked ~ .fa-solid {
+main .like input:hover ~ .fa-solid, main .like input:checked ~ .fa-solid {
   display: block;
   color: transparent;
   animation: like_anim 0.8s ease-in-out forwards;
 }
-main .like input:checked ~ .fa-regular {
+main .like input:hover ~ .fa-regular, main .like input:checked ~ .fa-regular {
   display: none;
 }
 main .like .fa-regular,
@@ -341,12 +343,12 @@ main section label .check .fa-solid {
 main section label input {
   display: none;
 }
-main section label input:checked ~ .check {
+main section label input:hover ~ .check, main section label input:checked ~ .check {
   position: relative;
   opacity: 1;
   right: 0;
 }
-main section label input:checked ~ .check .fa-solid {
+main section label input:hover ~ .check .fa-solid, main section label input:checked ~ .check .fa-solid {
   rotate: 360deg;
 }
 main section label .text {
@@ -398,10 +400,10 @@ main .commander button p {
 /* ====================== Media Queries ====================*/
 @media (767px < width) {
   .entete_1 {
-    height: 40vh;
+    max-height: 400px;
   }
   .entete_1 img {
-    object-position: 0 -20vh;
+    object-position: 0 -20vw;
   }
   main .titre {
     justify-content: flex-start;
@@ -428,12 +430,12 @@ main .commander button p {
     margin: 20px;
   }
 }
-@media (767px < width < 950px) {
+@media (500px < width < 950px) {
   .entete_1 {
     height: 30vh;
   }
   .entete_1 img {
-    object-position: 0 -15vh;
+    object-position: 0 -15vw;
   }
 }
 

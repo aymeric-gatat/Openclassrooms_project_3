@@ -15,10 +15,12 @@ header {
 .entete_1 {
   height: max-content;
   overflow: hidden;
+  max-height: 200px;
   img {
     position: relative;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: 0 -10vw;
   }
 }
 
@@ -82,6 +84,7 @@ main {
     }
     input {
       display: none;
+      &:hover ~,
       &:checked ~ {
         .check {
           position: relative;
@@ -133,9 +136,9 @@ main .commander {
 
 @media (767px < width) {
   .entete_1 {
-    height: 40vh;
+    max-height: 400px;
     img {
-      object-position: 0 -20vh;
+      object-position: 0 -20vw;
     }
   }
 
@@ -169,11 +172,11 @@ main .commander {
 
 // ============== Tablette ===========
 
-@media (767px < width < 950px) {
+@media (500px < width < 950px) {
   .entete_1 {
     height: 30vh;
     img {
-      object-position: 0 -15vh;
+      object-position: 0 -15vw;
     }
   }
 }
